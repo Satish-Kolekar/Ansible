@@ -1,0 +1,14 @@
+---
+-
+ host: all
+ gather_facts: true
+ 
+ tasks:
+   - name: stop service BITS, if started
+     win_service:
+      name: BITS
+      state: Stopped
+   
+...   
+      
+      
