@@ -7,7 +7,7 @@
   tasks: 
     - name: Stopped a service
   win_service:
-    name: BITS
+    service: name=BITS
     state: stopped
 ...
 
