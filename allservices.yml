@@ -6,7 +6,6 @@
   tasks: 
     - name: Get service name
       win_service:
-      name: win*  
       register: win*
 
     - name: Show output
