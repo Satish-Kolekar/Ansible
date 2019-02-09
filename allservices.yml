@@ -4,12 +4,14 @@
   gather_facts: true # this will make not to gather facts before running tasks
 
   tasks: 
-    - name: Get service name
-      win_service:
-      register: win*
-
-    - name: Show output
+    - name: get all services
+      win_shell: get-service
+      register: services
+    
+    - name: list the variable
       debug:
-        var: win*
+        msg: >
+             =-= my services =-= 
+             {{ services }}
       
 ...
