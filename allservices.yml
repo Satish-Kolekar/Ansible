@@ -1,0 +1,16 @@
+---
+-
+  hosts: all
+  gather_facts: true # this will make not to gather facts before running tasks
+
+  tasks: 
+    - name: Get service name
+      win_service:
+      name: win*  
+      register: win*
+
+    - name: Show output
+      debug:
+        var: win*
+      
+...
